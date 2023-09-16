@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Paragraphy";
+  src: url("/Fonts/Paragraphy.otf");
+}
+
+.nav-bar {
+  /* background-color: rgb(255 255 255 / 0.3); */
+  backdrop-filter: saturate(var(--nav-saturation)) blur(var(--nav-bg-blur));
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-bar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgb(255 165 62 / 0.6);
+  backdrop-filter: blur(var(--nav-bg-blur));
+  width: var(--progress-value);
+  z-index: -1;
+}
+
+.nav-name {
+  font-family: "Paragraphy", sans-serif;
+}
+
+.link-underline {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.link-underline::after {
+  content: "";
+  width: 0%;
+  height: 1.5px;
+  display: block;
+  background-color: var(--link-underline-color);
+  transition: 300ms ease-out;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
