@@ -35,10 +35,18 @@ export default function Navbar() {
       let totalScrollHeight = document.documentElement.scrollHeight;
       let viewportHeight = window.innerHeight;
 
+      console.log();
+
       let scrollProgress =
         (scrollPosition / (totalScrollHeight - viewportHeight)) * 100;
       let bgBlur = Math.min((scrollPosition / top_amount) * 3, 5);
+      let backOpacity = Math.min((scrollPosition / 150).toFixed(2), 0.7);
+      let textColor = Math.min(Math.round((scrollPosition / 150) * 100), 100);
 
+      document.documentElement.style.setProperty(
+        "--nav-bg-opacity",
+        `${backOpacity}`
+      );
       document.documentElement.style.setProperty(
         "--nav-bg-blur",
         `${bgBlur}px`
@@ -47,14 +55,18 @@ export default function Navbar() {
         "--progress-value",
         `${scrollProgress}%`
       );
+      document.documentElement.style.setProperty(
+        "--nav-text-color",
+        `${textColor}%`
+      );
     };
   });
   return (
     <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full lg:w-4/5 z-30">
-      <nav className="nav-bar sshadow-lg flex justify-between px-4 py-2 rounded-b-lg items-center text-neutral-800">
+      <nav className="nav-bar sshadow-lg flex justify-between px-4 py-2 rounded-b-lg items-center">
         <Link
           href="/"
-          className={`nav-name font-light text-7xl text-white duration-200`}
+          className={`nav-name font-light text-7xl duration-200 text-white`}
         >
           Kaustubh Paturi
         </Link>

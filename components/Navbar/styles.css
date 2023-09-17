@@ -4,17 +4,20 @@
 }
 
 .nav-bar {
-  /* background-color: rgb(255 255 255 / 0.3); */
+  background-color: rgb(64 64 64 / var(--nav-bg-opacity));
   backdrop-filter: saturate(var(--nav-saturation)) blur(var(--nav-bg-blur));
   position: relative;
   overflow: hidden;
+  color: hsl(0, 0%, var(--nav-text-color));
 }
 
 .nav-bar::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background-color: rgb(255 165 62 / 0.6);
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: var(--accent);
   backdrop-filter: blur(var(--nav-bg-blur));
   width: var(--progress-value);
   z-index: -1;

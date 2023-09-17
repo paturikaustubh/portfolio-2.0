@@ -212,14 +212,16 @@ export default function Home() {
         </div>
       </div>
       <div className="grid grid-cols-12">
-        <p
-          className={`${raleway.className} col-span-5 bg-violet-600 text-7xl sticky top-1/4 font-bold text-center text-white`}
-        >
-          About Me
-        </p>
+        <div className="bg-violet-600 col-span-5">
+          <p
+            className={`${raleway.className} text-7xl font-bold text-center text-white sticky top-1/4 fade`}
+          >
+            About Me
+          </p>
+        </div>
         <div className="col-span-7 flex w-[60ch] mx-auto items-center">
           <div className="flex flex-col">
-            <p className="text-xl text-neutral-800 about-me-text">
+            <p className="text-xl text-neutral-800 about-me-text fade">
               <span>Hello there! Kaustubh here, a </span>
               <span className="text-violet-600 font-bold">
                 Full-Stack Developer.
@@ -229,7 +231,7 @@ export default function Home() {
               happenings in this field allowing me deliver the best work for
               you.
             </p>
-            <div className="ml-auto mt-6 flex gap-4">
+            <div className="ml-auto mt-6 flex gap-4 fade">
               <Link
                 href={
                   "https://drive.google.com/file/d/1NE4si0PtbD08Z0lfLtL028RV8-JfufiS/view?usp=sharing"
@@ -253,29 +255,29 @@ export default function Home() {
       <div className="grid grid-cols-12">
         <div className="py-32 bg-violet-600 col-span-5">
           <p
-            className={`${raleway.className} text-7xl font-bold text-center text-white sticky top-1/4`}
+            className={`${raleway.className} text-7xl font-bold text-center text-white sticky top-1/4 fade`}
           >
             Skills
           </p>
         </div>
         <div className="col-span-7 py-32 flex flex-col justify-center items-center">
-          <p className="text-5xl text-neutral-800 about-me-text font-light">
+          <p className="text-5xl text-neutral-800 about-me-text font-light fade">
             <span className="text-violet-600 font-bold">Front End</span> Skills
           </p>
           <div className="tech-stack mt-4">
             {frontEndSkills.map(({ name, svg }, indx) => (
-              <div className="technology" key={indx}>
+              <div className="technology fade" key={indx}>
                 {svg}
                 <p className="tech-name text-2xl -z-10">{name}</p>
               </div>
             ))}
           </div>
-          <p className="text-5xl mt-12 text-neutral-800 about-me-text font-light">
+          <p className="text-5xl mt-12 text-neutral-800 about-me-text font-light fade">
             <span className="text-violet-600 font-bold">Back End</span> Skills
           </p>
           <div className="tech-stack mt-4 mx-auto">
             {backEndSkills.map(({ name, svg }, indx) => (
-              <div className="technology" key={indx}>
+              <div className="technology fade" key={indx}>
                 {svg}
                 <p className="tech-name text-2xl -z-10">{name}</p>
               </div>
