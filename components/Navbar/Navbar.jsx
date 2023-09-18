@@ -11,12 +11,12 @@ const raleway = Raleway({ subsets: ["latin"] });
 export default function Navbar() {
   const navigators = [
     {
-      name: "Home",
-      id: "root",
-    },
-    {
       name: "About Me",
       id: "about-me",
+    },
+    {
+      name: "Skills",
+      id: "skills",
     },
     {
       name: "Projects",
@@ -77,10 +77,19 @@ export default function Navbar() {
             return (
               <div
                 key={indx}
-                className="hover:text-accent-500 link-underline font-[500] cursor-pointer"
+                className="link-underline font-[500] cursor-pointer"
                 onClick={() => {
-                  const element = document.getElementById(id);
-                  element.scrollIntoView();
+                  var element = document.getElementById(id);
+                  var headerOffset = 100;
+                  var elementPosition = element.getBoundingClientRect().top;
+                  var offsetPosition =
+                    elementPosition + window.scrollY - headerOffset;
+                  console.log(elementPosition, offsetPosition, window.scrollY);
+
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth",
+                  });
                 }}
                 onMouseEnter={() =>
                   document.documentElement.style.setProperty(

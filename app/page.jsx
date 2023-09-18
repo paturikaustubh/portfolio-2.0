@@ -1,3 +1,4 @@
+import KnowMore from "@components/KnowMore/KnowMore";
 import { Raleway } from "next/font/google";
 import Link from "next/link";
 const raleway = Raleway({ subsets: ["latin"] });
@@ -205,23 +206,21 @@ export default function Home() {
               I am a Full Stack web developer with 2+ years of experience in
               crafting and delivering elegant websites.
             </p>
-            <p className="ml-auto mt-6 text-accent-500 py-2 px-6 hover:text-white hover:bg-accent-500 duration-300 rounded-r-full rounded-l-full border-2 border-accent-500 cursor-pointer">
-              Know More
-            </p>
+            <KnowMore />
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-12">
+      <div className="grid grid-cols-12" id="about-me">
         <div className="bg-violet-600 col-span-5">
           <p
-            className={`${raleway.className} text-7xl font-bold text-center text-white sticky top-1/4 fade`}
+            className={`${raleway.className} text-7xl font-bold text-center py-16 text-white sticky top-1/4 fade`}
           >
             About Me
           </p>
         </div>
-        <div className="col-span-7 flex w-[60ch] mx-auto items-center">
+        <div className="col-span-7 flex w-[60ch] mx-auto items-center py-16">
           <div className="flex flex-col">
-            <p className="text-xl text-neutral-800 about-me-text fade">
+            <p className="text-xl text-neutral-800 about-me-text fade fade-translate">
               <span>Hello there! Kaustubh here, a </span>
               <span className="text-violet-600 font-bold">
                 Full-Stack Developer.
@@ -231,7 +230,7 @@ export default function Home() {
               happenings in this field allowing me deliver the best work for
               you.
             </p>
-            <div className="ml-auto mt-6 flex gap-4 fade">
+            <div className="ml-auto mt-6 flex gap-4 fade fade-translate">
               <Link
                 href={
                   "https://drive.google.com/file/d/1NE4si0PtbD08Z0lfLtL028RV8-JfufiS/view?usp=sharing"
@@ -253,22 +252,22 @@ export default function Home() {
         </div>
       </div>
       <div className="grid grid-cols-12">
-        <div className="py-32 bg-violet-600 col-span-5">
+        <div className="pt-32 pb-16 bg-violet-600 col-span-5" id="skills">
           <p
             className={`${raleway.className} text-7xl font-bold text-center text-white sticky top-1/4 fade`}
           >
             Skills
           </p>
         </div>
-        <div className="col-span-7 py-32 flex flex-col justify-center items-center">
+        <div className="col-span-7 pt-32 pb-16 flex flex-col justify-center items-center">
           <p className="text-5xl text-neutral-800 about-me-text font-light fade">
             <span className="text-violet-600 font-bold">Front End</span> Skills
           </p>
           <div className="tech-stack mt-4">
             {frontEndSkills.map(({ name, svg }, indx) => (
-              <div className="technology fade" key={indx}>
+              <div className="technology fade fade-translate" key={indx}>
                 {svg}
-                <p className="tech-name text-2xl -z-10">{name}</p>
+                <p className="tech-name text-2xl">{name}</p>
               </div>
             ))}
           </div>
@@ -277,11 +276,35 @@ export default function Home() {
           </p>
           <div className="tech-stack mt-4 mx-auto">
             {backEndSkills.map(({ name, svg }, indx) => (
-              <div className="technology fade" key={indx}>
+              <div className="technology fade fade-translate" key={indx}>
                 {svg}
-                <p className="tech-name text-2xl -z-10">{name}</p>
+                <p className="tech-name text-2xl">{name}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-12">
+        <div className="py-16 bg-violet-600 col-span-5" id="projects">
+          <p
+            className={`${raleway.className} text-7xl font-bold text-center text-white sticky top-1/4 fade`}
+          >
+            Projects
+          </p>
+        </div>
+        <div className="col-span-7 py-16 flex flex-col justify-center items-center">
+          <div className="w-[75ch]">
+            <div className="fade text-4xl font-bold text-[#DC3545]">
+              Wok of Fame
+            </div>
+            <div className="mt-4 fade">
+              <img
+                src="Images/Wok of Fame.png"
+                width={"100%"}
+                className="rounded-md"
+              />
+              <div></div>
+            </div>
           </div>
         </div>
       </div>
