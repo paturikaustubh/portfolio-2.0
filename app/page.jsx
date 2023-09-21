@@ -302,24 +302,24 @@ export default function Home() {
               <p className="text-xl text-neutral-500">
                 Restraunt website for ordering food
               </p>
-              <div className="mt-4 fade rounded-md border-2 group shadow-lg relative project-img">
-                <img src="Images/Wok of Fame.png" width={"100%"} />
-                <div className="project-actions">
-                  <Link
-                    target="_blank"
-                    href="https://paturikaustubh.github.io/wok-of-fame/"
-                    className={round_button}
-                  >
-                    Experience
-                  </Link>
-                  <Link
-                    target="_blank"
-                    href="https://github.com/paturikaustubh/wok-of-fame"
-                    className={round_button}
-                  >
-                    Know More
-                  </Link>
-                </div>
+            </div>
+            <div className="mt-4 fade rounded-md border-2 group shadow-lg relative project-img">
+              <img src="Images/Wok of Fame.png" width={"100%"} />
+              <div className="project-actions">
+                <Link
+                  target="_blank"
+                  href="https://paturikaustubh.github.io/wok-of-fame/"
+                  className={round_button}
+                >
+                  Experience
+                </Link>
+                <Link
+                  target="_blank"
+                  href="https://github.com/paturikaustubh/wok-of-fame"
+                  className={round_button}
+                >
+                  Know More
+                </Link>
               </div>
             </div>
             <div className="fade mt-14">
@@ -328,24 +328,24 @@ export default function Home() {
                 <span className="text-[#00BFFF]">Pedia</span>
               </p>
               <p className="text-xl text-neutral-500">IMDb clone website</p>
-              <div className="mt-4 fade rounded-md border-2 group shadow-lg relative project-img">
-                <img src="Images/Flikipedia.png" width={"100%"} />
-                <div className="project-actions">
-                  <Link
-                    target="_blank"
-                    href="https://paturikaustubh.github.io/flikipedia/"
-                    className={round_button}
-                  >
-                    Experience
-                  </Link>
-                  <Link
-                    target="_blank"
-                    href="https://github.com/paturikaustubh/flikipedia"
-                    className={round_button}
-                  >
-                    Know More
-                  </Link>
-                </div>
+            </div>
+            <div className="mt-4 fade rounded-md border-2 group shadow-lg relative project-img">
+              <img src="Images/Flikipedia.png" width={"100%"} />
+              <div className="project-actions">
+                <Link
+                  target="_blank"
+                  href="https://paturikaustubh.github.io/flikipedia/"
+                  className={round_button}
+                >
+                  Experience
+                </Link>
+                <Link
+                  target="_blank"
+                  href="https://github.com/paturikaustubh/flikipedia"
+                  className={round_button}
+                >
+                  Know More
+                </Link>
               </div>
             </div>
           </div>
