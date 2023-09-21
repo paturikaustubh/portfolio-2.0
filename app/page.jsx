@@ -181,6 +181,9 @@ export default function Home() {
     },
   ];
 
+  const round_button =
+    "text-right text-accent-500 py-2 px-6 hover:text-white hover:bg-accent-500 duration-300 rounded-r-full rounded-l-full border-2 border-accent-500 cursor-pointer text-lg";
+
   return (
     <section className="flex flex-col">
       <div className="h-screen grid grid-cols-12">
@@ -236,14 +239,14 @@ export default function Home() {
                   "https://drive.google.com/file/d/1NE4si0PtbD08Z0lfLtL028RV8-JfufiS/view?usp=sharing"
                 }
                 target="_blank"
-                className="text-right text-accent-500 py-2 px-6 hover:text-white hover:bg-accent-500 duration-300 rounded-r-full rounded-l-full border-2 border-accent-500 cursor-pointer text-lg"
+                className={round_button}
               >
                 Resume
               </Link>
               <Link
                 href={"mailto:kaustubhpaturi23@gmail.com"}
                 target="_blank"
-                className="text-right text-accent-500 py-2 px-6 hover:text-white hover:bg-accent-500 duration-300 rounded-r-full rounded-l-full border-2 border-accent-500 cursor-pointer text-lg"
+                className={round_button}
               >
                 Mail Me
               </Link>
@@ -294,16 +297,56 @@ export default function Home() {
         </div>
         <div className="col-span-7 py-16 flex flex-col justify-center items-center">
           <div className="w-[75ch]">
-            <div className="fade text-4xl font-bold text-[#DC3545]">
-              Wok of Fame
+            <div className="fade">
+              <p className="text-4xl font-bold text-[#DC3545]">Wok of Fame</p>
+              <p className="text-xl text-neutral-500">
+                Restraunt website for ordering food
+              </p>
+              <div className="mt-4 fade rounded-md border-2 group shadow-lg relative project-img">
+                <img src="Images/Wok of Fame.png" width={"100%"} />
+                <div className="project-actions">
+                  <Link
+                    target="_blank"
+                    href="https://paturikaustubh.github.io/wok-of-fame/"
+                    className={round_button}
+                  >
+                    Experience
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href="https://github.com/paturikaustubh/wok-of-fame"
+                    className={round_button}
+                  >
+                    Know More
+                  </Link>
+                </div>
+              </div>
             </div>
-            <div className="mt-4 fade">
-              <img
-                src="Images/Wok of Fame.png"
-                width={"100%"}
-                className="rounded-md"
-              />
-              <div></div>
+            <div className="fade mt-14">
+              <p className="text-4xl font-bold">
+                <span className="text-[#FF6F00]">Fliki</span>
+                <span className="text-[#00BFFF]">Pedia</span>
+              </p>
+              <p className="text-xl text-neutral-500">IMDb clone website</p>
+              <div className="mt-4 fade rounded-md border-2 group shadow-lg relative project-img">
+                <img src="Images/Flikipedia.png" width={"100%"} />
+                <div className="project-actions">
+                  <Link
+                    target="_blank"
+                    href="https://paturikaustubh.github.io/flikipedia/"
+                    className={round_button}
+                  >
+                    Experience
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href="https://github.com/paturikaustubh/flikipedia"
+                    className={round_button}
+                  >
+                    Know More
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
