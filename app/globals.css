@@ -132,3 +132,19 @@ body {
 .project-img:hover .project-actions {
   opacity: 1;
 }
+
+.form-input {
+  border: 2px solid rgb(0 0 0 / 0.2);
+  border-radius: 0.375rem;
+  padding: 0.75rem;
+  outline: none;
+  transition: 300ms;
+}
+
+.form-input:hover {
+  border-color: rgb(0 0 0 / 0.5);
+}
+
+.form-input:is(:active, :focus) {
+  border-color: rgb(0 0 0 / 0.8);
+}
