@@ -11,7 +11,7 @@ export default function MessageFunction() {
       <p className="text-4xl col-span-12 font-bold text-violet-600 fade">
         Message Me
       </p>
-      <div className="col-span-12 text-lg max-w-[45ch] fade">
+      <div className="col-span-12 text-lg max-w-[45ch] fade fade-translate">
         {`Got something in your mind to share? Express yourself here!\nStart by introducing yourself`}
       </div>
       <input
@@ -27,6 +27,7 @@ export default function MessageFunction() {
         placeholder="E-Mail"
       />
       <textarea
+        required
         name="message"
         id="message"
         className="form-input col-span-12 fade"
@@ -35,7 +36,7 @@ export default function MessageFunction() {
       />
       <button
         type="submit"
-        className="text-right text-accent-500 py-2 px-6 hover:text-white hover:bg-accent-500 duration-300 rounded-md ml-auto col-span-12 border-2 border-accent-500 cursor-pointer text-lg fade"
+        className="text-right text-accent-500 py-2 px-6 hover:text-white hover:bg-accent-500 duration-300 rounded-md ml-auto col-span-12 border-2 border-accent-500 cursor-pointer text-lg fade fade-translate"
       >
         Submit
       </button>

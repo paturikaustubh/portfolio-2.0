@@ -2,6 +2,7 @@ import "./globals.css";
 import { Rubik } from "next/font/google";
 import Navbar from "@components/Navbar/Navbar";
 import SideNav from "@components/SideNav/SideNav";
+import Footer from "@components/Footer/Footer";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <SideNav />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -81,6 +81,68 @@ body {
   line-height: 1.6em;
 }
 
+.review-card {
+  position: relative;
+  border: 2px solid rgb(0 0 0 / 0.1);
+  border-radius: 2em 4.5em 2em 2em;
+  padding: 3.5em 3em 2em 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  width: 60ch;
+}
+
+.review-card::after {
+  content: open-quote;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--accent);
+  font-size: 16em;
+  transform: translate(30%, -32%);
+  @apply fade;
+}
+
+.review-text {
+  color: rgb(64 64 64);
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.review-card-container {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.review-card > .more-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+.review-card > .more-info > .rating {
+  color: rgb(64 64 64);
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.reviewer {
+  text-align: right;
+}
+
+.reviewer > .name {
+  color: rgb(124 58 237);
+  font-size: 1.2em;
+}
+
+.reviewer > .designation {
+  font-size: 0.9em;
+  font-weight: 300;
+  font-style: italic;
+  color: rgb(70 70 70);
+}
+
 .tech-stack {
   display: grid;
   grid-template-columns: repeat(3, minmax(165px, 1fr));

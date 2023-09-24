@@ -12,7 +12,7 @@ export default function Home() {
         <svg
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
-          width={"145"}
+          style={{ maxWidth: 145, minWidth: 20 }}
           className="hover:fill-[#149ECA] duration-300 fill-neutral-800"
         >
           <g>
@@ -188,13 +188,13 @@ export default function Home() {
   return (
     <section className="flex flex-col">
       <div className="h-screen grid grid-cols-12">
-        <div className="lg:col-span-5 col-span-4 bg-violet-600 h-full flex justify-end items-center">
+        <div className="lg:col-span-5 col-span-12 bg-violet-600 h-full flex lg:justify-end justify-center items-center">
           <img
             src={"Images/Kaustubh.jpg"}
             className="kaustubh-img border lg:translate-x-1/4"
           />
         </div>
-        <div className="lg:col-span-7 col-span-8 flex items-center justify-center text-neutral-800">
+        <div className="lg:col-span-7 col-span-12 flex items-center justify-center text-neutral-800">
           <div className="flex flex-col lg:pl-24">
             <p className={`${raleway.className} text-7xl`}>
               <span className="font-bold text-violet-600">Kaustubh </span>
@@ -215,15 +215,15 @@ export default function Home() {
         </div>
       </div>
       <div className="grid grid-cols-12" id="about-me">
-        <div className="bg-violet-600 lg:col-span-5 col-span-4">
+        <div className="bg-violet-600 lg:col-span-5 col-span-12">
           <p
-            className={`${raleway.className} text-7xl font-bold text-center pb-20 text-white sticky top-1/4 fade`}
+            className={`${raleway.className} text-7xl font-bold text-center py-20 text-white sticky top-1/4 fade`}
           >
             About Me
           </p>
         </div>
-        <div className="lg:col-span-7 col-span-8 flex w-[60ch] mx-auto items-center pb-20">
-          <div className="flex flex-col">
+        <div className="lg:col-span-7 col-span-12 flex flex-col justify-center items-center py-20">
+          <div className="flex flex-col w-[60ch]">
             <p className="text-xl text-neutral-800 about-me-text fade fade-translate">
               <span>Hello there! Kaustubh here, a </span>
               <span className="text-violet-600 font-bold">
@@ -253,11 +253,29 @@ export default function Home() {
               </Link>
             </div>
           </div>
+          <div className="reviews w-full flex mt-12 justify-center">
+            <div className="review-card fade">
+              <p className="review-text fade fade-translate">
+                He's a top pick for any of your projects.
+              </p>
+              <div className="more-info">
+                <div className="rating">
+                  ⭐ 4.5<sub>/5</sub>
+                </div>
+                <div className="reviewer">
+                  <p className="name fade fade-translate">-M.S. Dhoni</p>
+                  <p className="designation fade fade-translate">
+                    Indian Cricketer
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className="grid grid-cols-12">
         <div
-          className="py-20 bg-violet-600 lg:col-span-5 col-span-4"
+          className="py-20 bg-violet-600 lg:col-span-5 col-span-12"
           id="skills"
         >
           <p
@@ -266,7 +284,7 @@ export default function Home() {
             Skills
           </p>
         </div>
-        <div className="lg:col-span-7 col-span-8 py-20 flex flex-col justify-center items-center">
+        <div className="lg:col-span-7 col-span-12 py-20 flex flex-col justify-center items-center">
           <p className="text-5xl text-neutral-800 about-me-text font-light fade">
             <span className="text-violet-600 font-bold">Front End</span> Skills
           </p>
@@ -274,7 +292,7 @@ export default function Home() {
             {frontEndSkills.map(({ name, svg }, indx) => (
               <div className="technology fade fade-translate" key={indx}>
                 {svg}
-                <p className="tech-name text-2xl">{name}</p>
+                <p className="tech-name text-2xl -z-10">{name}</p>
               </div>
             ))}
           </div>
@@ -285,7 +303,7 @@ export default function Home() {
             {backEndSkills.map(({ name, svg }, indx) => (
               <div className="technology fade fade-translate" key={indx}>
                 {svg}
-                <p className="tech-name text-2xl">{name}</p>
+                <p className="tech-name text-2xl -z-10">{name}</p>
               </div>
             ))}
           </div>
@@ -293,7 +311,7 @@ export default function Home() {
       </div>
       <div className="grid grid-cols-12">
         <div
-          className="py-20 bg-violet-600 lg:col-span-5 col-span-4"
+          className="py-20 bg-violet-600 lg:col-span-5 col-span-12"
           id="projects"
         >
           <p
@@ -302,7 +320,7 @@ export default function Home() {
             Projects
           </p>
         </div>
-        <div className="lg:col-span-7 col-span-8 py-20 flex flex-col justify-center items-center">
+        <div className="lg:col-span-7 col-span-12 py-20 flex flex-col justify-center items-center">
           <div className="w-[75ch]">
             <div className="fade">
               <p className="text-4xl font-bold text-[#DC3545]">Wok of Fame</p>
@@ -360,8 +378,8 @@ export default function Home() {
       </div>
       <div className="grid grid-cols-12">
         <div
-          className="py-20 bg-violet-600 lg:col-span-5 col-span-4"
-          id="about-me"
+          className="py-20 bg-violet-600 lg:col-span-5 col-span-12"
+          id="contact-me"
         >
           <p
             className={`${raleway.className} text-7xl font-bold text-center text-white sticky top-1/4 fade`}
@@ -369,7 +387,7 @@ export default function Home() {
             Contact Me
           </p>
         </div>
-        <div className="lg:col-span-7 col-span-8 py-20 flex flex-col justify-center items-center">
+        <div className="lg:col-span-7 col-span-12 py-20 flex flex-col justify-center items-center">
           <div className="w-[75ch]">
             <MessageForm />
           </div>
