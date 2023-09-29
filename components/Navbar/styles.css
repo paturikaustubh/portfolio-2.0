@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Paragraphy";
-  src: url("/Fonts/Paragraphy.otf");
+  font-family: "Signature";
+  src: url("/Fonts/Colatin.otf");
 }
 
 .nav-bar {
@@ -24,7 +24,7 @@
 }
 
 .nav-name {
-  font-family: "Paragraphy", sans-serif;
+  font-family: "Signature", sans-serif;
 }
 
 .link-underline {

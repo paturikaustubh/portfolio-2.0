@@ -44,10 +44,10 @@ body {
 
 @keyframes fade-translate {
   from {
-    transform: translate(-12%);
+    transform: translateX(-12%);
   }
   to {
-    transform: translate(0%);
+    transform: translateX(0%);
   }
 }
 
@@ -90,6 +90,7 @@ body {
   flex-direction: column;
   gap: 2.5em;
   width: 60ch;
+  @apply fade-translate;
 }
 
 .review-card::after {

@@ -66,7 +66,8 @@ export default function Navbar() {
       <nav className="nav-bar sshadow-lg flex justify-between px-4 py-2 rounded-b-lg items-center">
         <Link
           href="/"
-          className={`nav-name font-light text-7xl duration-200 text-white`}
+          className={`nav-name text-7xl duration-200 text-white`}
+          style={{ fontWeight: 100 }}
         >
           Kaustubh Paturi
         </Link>

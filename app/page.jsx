@@ -253,9 +253,9 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="reviews w-full flex mt-12 justify-center">
+          <div className="reviews w-full flex flex-col gap-4 mt-12 items-center justify-center">
             <div className="review-card fade">
-              <p className="review-text fade fade-translate">
+              <p className="review-text fade">
                 He's a top pick for any of your projects.
               </p>
               <div className="more-info">
@@ -268,6 +268,11 @@ export default function Home() {
                     Indian Cricketer
                   </p>
                 </div>
+              </div>
+            </div>
+            <div className="w-[60ch] flex">
+              <div className="text-right text-accent-500 py-2 px-6 hover:text-white hover:bg-accent-500 duration-300 rounded-md ml-auto col-span-12 border-2 border-accent-500 cursor-pointer text-lg fade fade-translate">
+                + Add review
               </div>
             </div>
           </div>
