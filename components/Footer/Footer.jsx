@@ -1,5 +1,5 @@
 import "./styles.css";
 
 export default function Footer() {
-  return <footer>GAY</footer>;
+  return <footer>FOOTER</footer>;
 }
