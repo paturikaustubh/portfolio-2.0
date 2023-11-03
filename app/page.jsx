@@ -237,7 +237,7 @@ export default function Home() {
             <div className="ml-auto mt-6 flex gap-4 fade fade-translate">
               <Link
                 href={
-                  "https://drive.google.com/file/d/1NE4si0PtbD08Z0lfLtL028RV8-JfufiS/view?usp=sharing"
+                  "https://drive.google.com/file/d/1MfsXpNlgKppnHvmwcpzISwZCl99xdEj5/view?usp=sharing"
                 }
                 target="_blank"
                 className={round_button}
